@@ -5,7 +5,7 @@ const benefitsData = [
     {
         icon: "✨",
         title: "SÃO FÁCEIS DE PRODUZIR",
-        description: "A produção de Salgados é simples e não precisa de muitos utensílios e habilidade! Você consegue fazer com os utensílios que tem em casa: liquidificador, forno doméstico e panelas simples. Basta ter vontade e querer ganhar dinheiro com eles!",
+        description: "A produção das receita é simples e não precisa de muitos utensílios e habilidade! Você consegue fazer com os utensílios que tem em casa: liquidificador, forno doméstico e panelas simples. Basta ter vontade e querer ganhar dinheiro com eles!",
         delay: 0.2
     },
     {
@@ -23,7 +23,7 @@ const benefitsData = [
     {
         icon: "📈",
         title: "ALTA DEMANDA",
-        description: "Trabalhar com doces e salgados saudáveis é uma das maiores oportunidades de Negócios de 2025. Você vai poder atender sensíveis ao glúten, intolerantes à lactose, diabéticos, adeptos da dieta lowcarb ou que buscam se alimentar de forma mais saudável.",
+        description: "Trabalhar com as receitas premium é uma das maiores oportunidades de Negócios de 2026 e quem iniciar primeiro fica com todo o lucro.",
         delay: 0.8
     }
 ];
