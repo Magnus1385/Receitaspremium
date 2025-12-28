@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const mainOfferItems = [
-    "Curso Completo de Salgados Saudáveis",
+    "Receitas Secretas Premium",
     "Acesso a todas as aulas por 12 meses",
     "Acesso às atualizações por 12 meses",
     "Receitas Completas passo a passo",
@@ -13,7 +13,11 @@ const mainOfferItems = [
 const bonusItems = [
     { text: "Bônus 1: Imersão Primeira Venda em 21 Dias", value: "R$ 337" },
     { text: "Bônus 2: Receitas lucrativas de brigadeiros premium", value: "R$ 197" },
-    { text: "Bônus 3: Receitas lucrativas de Suco gourmet", value: "R$ 97" }
+    { text: "Bônus 3: Receitas lucrativas de Suco gourmet", value: "R$ 97" },
+    { text: "Bônus 4: Manual Anti Concorrência", value: "R$ 147" },
+    { text: "Bônus 5: Vender Sem Perder - A Precificação que traz Lucro", value: "R$ 197" },
+    { text: "Bônus 6: Divulgação – Como encontrar seus primeiros clientes", value: "R$ 127" },
+    { text: "Bônus 7: Aprimoramento Contínuo e mais", value: "R$ 97" }
 ];
 
 const Offer = () => {
@@ -63,8 +67,13 @@ const Offer = () => {
                                     transition={{ delay: 0.3 + (index * 0.1) }}
                                     style={{ fontSize: '18px', marginBottom: '16px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}
                                 >
-                                    <div><span style={{ marginRight: '12px' }}>🎁</span> {item.text}</div>
-                                    <span style={{ textDecoration: 'line-through', opacity: 0.7 }}>{item.value}</span>
+                                    <div className="flex items-center">
+                                        <span className="text-2xl mr-2">🎁</span>
+                                        <span className="text-white">{item.text}</span>
+                                    </div>
+                                    <span className="text-[#FFD700] text-2xl font-extrabold line-through ml-3" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                                        {item.value}
+                                    </span>
                                 </motion.li>
                             ))}
                         </ul>
@@ -111,7 +120,7 @@ const Offer = () => {
                         fontWeight: '500',
                         marginBottom: '12px'
                     }}>
-                        De R$ 631,00
+                        De R$ 1.402,00
                     </p>
 
                     <div style={{ margin: '8px 0' }}>
@@ -182,7 +191,7 @@ const Offer = () => {
                         borderRadius: '10px',
                         display: 'inline-block'
                     }}>
-                        Economia de R$ 601,30
+                        Economia de R$ 1.372,30
                     </div>
 
                     <a
