@@ -185,10 +185,12 @@ const Offer = () => {
                         Economia de R$ 601,30
                     </div>
 
-                    <motion.button
-                        animate={{ scale: [1, 1.05, 1] }}
-                        transition={{ duration: 2, repeat: Infinity }}
-                        whileHover={{ scale: 1.1 }}
+                    <a
+                        href="https://pay.kiwify.com.br/5epymGt"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={() => window.fbq('track', 'InitiateCheckout')}
+                        className="w-full button p-4 rounded text-center text-white text-lg font-semibold cursor-pointer hover:opacity-75 transition duration-75"
                         style={{
                             background: 'linear-gradient(to right, #FF1493, #C71585)',
                             color: '#FFFFFF',
@@ -203,11 +205,12 @@ const Offer = () => {
                             textTransform: 'uppercase',
                             letterSpacing: '0.03em',
                             width: '100%',
-                            cursor: 'pointer'
+                            display: 'block',
+                            textDecoration: 'none'
                         }}
                     >
                         QUERO COMEÇAR A VENDER AGORA!
-                    </motion.button>
+                    </a>
                 </motion.div>
             </div>
         </section>
