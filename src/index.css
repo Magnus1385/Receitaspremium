@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&family=Playfair+Display:wght@800&family=Poppins:wght@900&display=swap');
+
+:root {
+  --primary-color: #FF69B4;
+  --secondary-color: #FF1493;
+  --accent-color: #FFB6C1;
+  --background-light: #FFF5F7;
+  --background-dark: #C71585;
+  --text-primary: #1A1A1A;
+  --text-secondary: #6C757D;
+  --white: #FFFFFF;
+
+  --heading-font: 'Montserrat', sans-serif;
+  --body-font: 'Open Sans', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--body-font);
+  color: var(--text-primary);
+  background-color: var(--white);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading-font);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
