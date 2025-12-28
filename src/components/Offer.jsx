@@ -31,10 +31,10 @@ const Offer = () => {
                     transition={{ duration: 0.6 }}
                 >
                     <h2 style={{ fontSize: '32px', marginBottom: '16px' }}>
-                        O Empilhamento de Oferta
+                        Oferta Irresistível
                     </h2>
                     <p style={{ fontSize: '20px', marginBottom: '60px', opacity: 0.9 }}>
-                        Tudo o que você recebe entrando agora
+                        Tudo o que você recebe comprando agora
                     </p>
                 </motion.div>
 

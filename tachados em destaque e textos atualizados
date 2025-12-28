@@ -1,0 +1,112 @@
+warning: in the working copy of 'index.html', LF will be replaced by CRLF the next time Git touches it
+[1mdiff --git a/index.html b/index.html[m
+[1mindex 0819da8..2010e1e 100644[m
+[1m--- a/index.html[m
+[1m+++ b/index.html[m
+[36m@@ -1,38 +1,49 @@[m
+ <!doctype html>[m
+ <html lang="en">[m
+[31m-  <head>[m
+[31m-    <meta charset="UTF-8" />[m
+[31m-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />[m
+[31m-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />[m
+[31m-    <title>Receitas Premium 2026 - Transforme sua Cozinha em Negócio Lucrativo</title>[m
+[31m-    <meta name="description" content="Aprenda a fazer receitas premium e fature mais de R$8.500/mês. Curso completo com bônus exclusivos e garantia de 7 dias." />[m
+[31m-    <meta name="keywords" content="receitas premium, negócio em casa, salgados gourmet, brigadeiros finos, curso de culinária" />[m
+[31m-    [m
+[31m-    <!-- Google Analytics Placeholder -->[m
+[31m-    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>[m
+[31m-    <script>[m
+[31m-      window.dataLayer = window.dataLayer || [];[m
+[31m-      function gtag(){dataLayer.push(arguments);}[m
+[31m-      gtag('js', new Date());[m
+[31m-      gtag('config', 'GA_MEASUREMENT_ID');[m
+[31m-    </script>[m
+ [m
+[31m-    <!-- Facebook Pixel Placeholder -->[m
+[31m-    <script>[m
+[31m-      !function(f,b,e,v,n,t,s)[m
+[31m-      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?[m
+[31m-      n.callMethod.apply(n,arguments):n.queue.push(arguments)};[m
+[31m-      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';[m
+[31m-      n.queue=[];t=b.createElement(e);t.async=!0;[m
+[31m-      t.src=v;s=b.getElementsByTagName(e)[0];[m
+[31m-      s.parentNode.insertBefore(t,s)}(window, document,'script',[m
+[32m+[m[32m<head>[m
+[32m+[m[32m  <meta charset="UTF-8" />[m
+[32m+[m[32m  <link rel="icon" type="image/svg+xml" href="/vite.svg" />[m
+[32m+[m[32m  <meta name="viewport" content="width=device-width, initial-scale=1.0" />[m
+[32m+[m[32m  <title>Receitas Premium 2026 - Transforme sua Cozinha em Negócio Lucrativo</title>[m
+[32m+[m[32m  <meta name="description"[m
+[32m+[m[32m    content="Aprenda a fazer receitas premium e fature mais de R$8.500/mês. Curso completo com bônus exclusivos e garantia de 7 dias." />[m
+[32m+[m[32m  <meta name="keywords"[m
+[32m+[m[32m    content="receitas premium, negócio em casa, salgados gourmet, brigadeiros finos, curso de culinária" />[m
+[32m+[m
+[32m+[m[32m  <!-- Google Analytics Placeholder -->[m
+[32m+[m[32m  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>[m
+[32m+[m[32m  <script>[m
+[32m+[m[32m    window.dataLayer = window.dataLayer || [];[m
+[32m+[m[32m    function gtag() { dataLayer.push(arguments); }[m
+[32m+[m[32m    gtag('js', new Date());[m
+[32m+[m[32m    gtag('config', 'GA_MEASUREMENT_ID');[m
+[32m+[m[32m  </script>[m
+[32m+[m
+[32m+[m[32m  <!-- Meta Pixel Code -->[m
+[32m+[m[32m  <script>[m
+[32m+[m[32m    !function (f, b, e, v, n, t, s) {[m
+[32m+[m[32m      if (f.fbq) return; n = f.fbq = function () {[m
+[32m+[m[32m        n.callMethod ?[m
+[32m+[m[32m          n.callMethod.apply(n, arguments) : n.queue.push(arguments)[m
+[32m+[m[32m      };[m
+[32m+[m[32m      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';[m
+[32m+[m[32m      n.queue = []; t = b.createElement(e); t.async = !0;[m
+[32m+[m[32m      t.src = v; s = b.getElementsByTagName(e)[0];[m
+[32m+[m[32m      s.parentNode.insertBefore(t, s)[m
+[32m+[m[32m    }(window, document, 'script',[m
+       'https://connect.facebook.net/en_US/fbevents.js');[m
+[31m-      fbq('init', 'PIXEL_ID');[m
+[31m-      fbq('track', 'PageView');[m
+[31m-    </script>[m
+[31m-  </head>[m
+[31m-  <body>[m
+[31m-    <div id="root"></div>[m
+[31m-    <script type="module" src="/src/main.jsx"></script>[m
+[31m-  </body>[m
+[31m-</html>[m
+[32m+[m[32m    fbq('init', '1448482356718765');[m
+[32m+[m[32m    fbq('track', 'PageView');[m
+[32m+[m[32m  </script>[m
+[32m+[m[32m  <!-- End Meta Pixel Code -->[m
+[32m+[m[32m</head>[m
+[32m+[m
+[32m+[m[32m<body>[m
+[32m+[m[32m  <noscript><img height="1" width="1" style="display:none"[m
+[32m+[m[32m      src="https://www.facebook.com/tr?id=1448482356718765&ev=PageView&noscript=1" /></noscript>[m
+[32m+[m[32m  <div id="root"></div>[m
+[32m+[m[32m  <script type="module" src="/src/main.jsx"></script>[m
+[32m+[m[32m</body>[m
+[32m+[m
+[32m+[m[32m</html>[m
+\ No newline at end of file[m
+[1mdiff --git a/src/components/Benefits.jsx b/src/components/Benefits.jsx[m
+[1mindex b378dc9..8ac4a62 100644[m
+[1m--- a/src/components/Benefits.jsx[m
+[1m+++ b/src/components/Benefits.jsx[m
+[36m@@ -5,7 +5,7 @@[m [mconst benefitsData = [[m
+     {[m
+         icon: "✨",[m
+         title: "SÃO FÁCEIS DE PRODUZIR",[m
+[31m-        description: "A produção de Salgados é simples e não precisa de muitos utensílios e habilidade! Você consegue fazer com os utensílios que tem em casa: liquidificador, forno doméstico e panelas simples. Basta ter vontade e querer ganhar dinheiro com eles!",[m
+[32m+[m[32m        description: "A produção das receita é simples e não precisa de muitos utensílios e habilidade! Você consegue fazer com os utensílios que tem em casa: liquidificador, forno doméstico e panelas simples. Basta ter vontade e querer ganhar dinheiro com eles!",[m
+         delay: 0.2[m
+     },[m
+     {[m
+[36m@@ -23,7 +23,7 @@[m [mconst benefitsData = [[m
+     {[m
+         icon: "📈",[m
+         title: "ALTA DEMANDA",[m
+[31m-        description: "Trabalhar com doces e salgados saudáveis é uma das maiores oportunidades de Negócios de 2025. Você vai poder atender sensíveis ao glúten, intolerantes à lactose, diabéticos, adeptos da dieta lowcarb ou que buscam se alimentar de forma mais saudável.",[m
+[32m+[m[32m        description: "Trabalhar com as receitas premium é uma das maiores oportunidades de Negócios de 2026 e quem iniciar primeiro fica com todo o lucro.",[m
+         delay: 0.8[m
+     }[m
+ ];[m
