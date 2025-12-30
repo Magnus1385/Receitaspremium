@@ -82,32 +82,7 @@ const Hero = () => {
                     </span>
                 </motion.div>
 
-                {/* CTA Button */}
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.8 }}
-                >
-                    <motion.button
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        style={{
-                            backgroundColor: '#FF1493', // Secondary Color/Hot Pink
-                            color: '#FFFFFF',
-                            border: 'none',
-                            padding: '20px 60px',
-                            fontSize: '20px',
-                            fontWeight: 'bold',
-                            borderRadius: '50px', // More modern rounded style
-                            boxShadow: '0 4px 15px rgba(255, 20, 147, 0.4)',
-                            cursor: 'pointer',
-                            fontFamily: "'Montserrat', sans-serif"
-                        }}
-                        onClick={() => document.getElementById('offer_section').scrollIntoView({ behavior: 'smooth' })}
-                    >
-                        QUERO COMEÇAR AGORA
-                    </motion.button>
-                </motion.div>
+
             </div>
         </section>
     );
