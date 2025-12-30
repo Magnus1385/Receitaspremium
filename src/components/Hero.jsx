@@ -54,7 +54,7 @@ const Hero = () => {
                         marginRight: 'auto'
                     }}
                 >
-                    Aproveite a NOVA TENDÊNCIA para 2026 e faça igual nossas alunas que já estão fazendo
+                    SE VOCÊ NÃO VENDER COM NOSSO MÉTODO E RECEITAS EM 7 DIAS, DEVOLVEMOS SEU DINHEIRO
                 </motion.p>
 
                 {/* Highlight Earnings Box */}
