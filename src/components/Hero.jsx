@@ -54,7 +54,7 @@ const Hero = () => {
                         marginRight: 'auto'
                     }}
                 >
-                    Aproveite a NOVA TENDÊNCIA para 2026 e faça igual nossas alunas que já estão fazendo
+
                 </motion.p>
 
                 {/* Guarantee Text */}
