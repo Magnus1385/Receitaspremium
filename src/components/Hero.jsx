@@ -48,6 +48,26 @@ const Hero = () => {
                         fontSize: 'clamp(18px, 3vw, 24px)',
                         color: '#6C757D',
                         lineHeight: '1.6',
+                        marginBottom: '16px',
+                        maxWidth: '800px',
+                        marginLeft: 'auto',
+                        marginRight: 'auto'
+                    }}
+                >
+                    Aproveite a NOVA TENDÊNCIA para 2026 e faça igual nossas alunas que já estão fazendo
+                </motion.p>
+
+                {/* Guarantee Text */}
+                <motion.p
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.5 }}
+                    style={{
+                        fontFamily: "'Poppins', sans-serif",
+                        fontWeight: '900',
+                        fontSize: 'clamp(20px, 4vw, 28px)',
+                        color: '#C71585',
+                        lineHeight: '1.2',
                         marginBottom: '32px',
                         maxWidth: '800px',
                         marginLeft: 'auto',
