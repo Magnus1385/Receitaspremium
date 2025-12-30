@@ -30,27 +30,63 @@ const benefitsData = [
 
 const Benefits = () => {
     return (
-        <section style={{ padding: '100px 20px', backgroundColor: 'var(--white)' }}>
+        <section
+            style={{
+                padding: '120px 20px',
+                background: 'linear-gradient(to bottom, #FFFFFF 0%, #FFF5F7 100%)',
+                position: 'relative'
+            }}
+        >
             <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
-                    style={{ textAlign: 'center', marginBottom: '60px' }}
+                    style={{ textAlign: 'center', marginBottom: '80px' }}
                 >
-                    <h2 style={{ color: 'var(--secondary-color)', fontSize: '32px', marginBottom: '16px' }}>
+                    <span style={{
+                        color: '#FF1493',
+                        fontWeight: '800',
+                        fontSize: '14px',
+                        textTransform: 'uppercase',
+                        letterSpacing: '0.2em',
+                        display: 'block',
+                        marginBottom: '12px'
+                    }}>
+                        Vantagens Exclusivas
+                    </span>
+                    <h2 style={{
+                        color: '#C71585',
+                        fontSize: 'clamp(32px, 5vw, 48px)',
+                        fontFamily: "'Playfair Display', serif",
+                        fontWeight: '800',
+                        marginBottom: '24px',
+                        lineHeight: '1.1'
+                    }}>
                         Por que começar a vender com as receitas premium?
                     </h2>
-                    <p style={{ fontSize: '20px', color: 'var(--text-secondary)' }}>
-                        Vantagens que fazem a diferença no seu negócio
+                    <div style={{
+                        width: '60px',
+                        height: '4px',
+                        background: '#FF1493',
+                        margin: '0 auto 24px',
+                        borderRadius: '2px'
+                    }} />
+                    <p style={{
+                        fontSize: '20px',
+                        color: '#6C757D',
+                        maxWidth: '700px',
+                        margin: '0 auto'
+                    }}>
+                        Construa um negócio sólido e lucrativo com facilidade e baixo investimento.
                     </p>
                 </motion.div>
 
                 <div style={{
                     display: 'grid',
-                    gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', // Slightly wider min-width for text heavy cards
-                    gap: '32px'
+                    gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+                    gap: '40px'
                 }}>
                     {benefitsData.map((benefit, index) => (
                         <motion.div
@@ -59,20 +95,50 @@ const Benefits = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: benefit.delay }}
-                            whileHover={{ y: -5 }}
+                            whileHover={{ y: -10 }}
                             style={{
-                                backgroundColor: 'var(--background-light)',
-                                border: '2px solid var(--accent-color)',
-                                borderRadius: '16px',
-                                padding: '32px',
-                                boxShadow: '0 4px 6px rgba(0,0,0,0.05)'
+                                backgroundColor: '#FFFFFF',
+                                padding: '48px 32px',
+                                borderRadius: '24px',
+                                boxShadow: '0 20px 40px rgba(199, 21, 133, 0.05)',
+                                border: '1px solid rgba(255, 182, 193, 0.3)',
+                                transition: 'all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)',
+                                height: '100%',
+                                display: 'flex',
+                                flexDirection: 'column',
+                                alignItems: 'center',
+                                textAlign: 'center'
                             }}
                         >
-                            <div style={{ fontSize: '48px', marginBottom: '24px' }}>{benefit.icon}</div>
-                            <h3 style={{ color: 'var(--secondary-color)', marginBottom: '16px', fontSize: '24px' }}>
+                            <div style={{
+                                fontSize: '48px',
+                                marginBottom: '28px',
+                                background: '#FFF0F5',
+                                width: '100px',
+                                height: '100px',
+                                display: 'flex',
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                                borderRadius: '50%',
+                                boxShadow: 'inset 0 4px 10px rgba(199, 21, 133, 0.1)'
+                            }}>
+                                {benefit.icon}
+                            </div>
+                            <h3 style={{
+                                color: '#C71585',
+                                marginBottom: '20px',
+                                fontSize: '22px',
+                                fontFamily: "'Montserrat', sans-serif",
+                                fontWeight: '800',
+                                letterSpacing: '-0.02em'
+                            }}>
                                 {benefit.title}
                             </h3>
-                            <p style={{ color: 'var(--text-secondary)', lineHeight: '1.6' }}>
+                            <p style={{
+                                color: '#6C757D',
+                                lineHeight: '1.7',
+                                fontSize: '16px'
+                            }}>
                                 {benefit.description}
                             </p>
                         </motion.div>

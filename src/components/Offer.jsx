@@ -22,203 +22,216 @@ const bonusItems = [
 
 const Offer = () => {
     return (
-        <section id="offer_section" style={{ padding: '100px 20px', backgroundColor: 'var(--secondary-color)', color: 'var(--white)' }}>
-            <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
+        <section
+            id="offer_section"
+            style={{
+                padding: '120px 20px',
+                background: 'linear-gradient(135deg, #FF1493 0%, #C71585 100%)',
+                color: '#FFFFFF',
+                overflow: 'hidden',
+                position: 'relative'
+            }}
+        >
+            {/* Background decorative elements */}
+            <div style={{ position: 'absolute', top: '-100px', right: '-100px', width: '300px', height: '300px', borderRadius: '50%', background: 'rgba(255,255,255,0.05)' }} />
+            <div style={{ position: 'absolute', bottom: '-150px', left: '-100px', width: '400px', height: '400px', borderRadius: '50%', background: 'rgba(255,182,193,0.1)' }} />
+
+            <div style={{ maxWidth: '1000px', margin: '0 auto', textAlign: 'center', position: 'relative', zIndex: 1 }}>
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
                 >
-                    <h2 style={{ fontSize: '32px', marginBottom: '16px' }}>
-                        Oferta Irresistível
+                    <span style={{
+                        display: 'inline-block',
+                        padding: '8px 20px',
+                        background: 'rgba(255,255,255,0.2)',
+                        borderRadius: '30px',
+                        fontSize: '14px',
+                        fontWeight: '700',
+                        marginBottom: '24px',
+                        backdropFilter: 'blur(5px)'
+                    }}>
+                        🎁 ÚLTIMA OPORTUNIDADE DO ANO
+                    </span>
+                    <h2 style={{
+                        fontSize: 'clamp(32px, 6vw, 56px)',
+                        marginBottom: '20px',
+                        fontFamily: "'Playfair Display', serif",
+                        fontWeight: '800',
+                        lineHeight: '1.1'
+                    }}>
+                        Tudo o que você recebe entrando AGORA:
                     </h2>
-                    <p style={{ fontSize: '20px', marginBottom: '60px', opacity: 0.9 }}>
-                        Tudo o que você recebe comprando agora
+                    <p style={{ fontSize: '20px', marginBottom: '60px', opacity: 0.9, maxWidth: '600px', margin: '0 auto 60px' }}>
+                        Transforme sua paixão em lucro com o método mais completo do mercado.
                     </p>
                 </motion.div>
 
-                <div style={{ textAlign: 'left', marginBottom: '48px', backgroundColor: 'rgba(255,255,255,0.1)', padding: '32px', borderRadius: '16px' }}>
-                    <h3 style={{ fontSize: '24px', marginBottom: '24px', textAlign: 'center' }}>TUDO O QUE VOCÊ RECEBE ENTRANDO AGORA:</h3>
-                    <ul style={{ listStyle: 'none' }}>
-                        {mainOfferItems.map((item, index) => (
-                            <motion.li
-                                key={index}
-                                initial={{ opacity: 0, x: -20 }}
-                                whileInView={{ opacity: 1, x: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: index * 0.1 }}
-                                style={{ fontSize: '18px', marginBottom: '16px', display: 'flex', alignItems: 'center' }}
-                            >
-                                <span style={{ marginRight: '12px' }}>✅</span> {item}
-                            </motion.li>
-                        ))}
-                    </ul>
-
-                    <div style={{ marginTop: '48px', borderTop: '1px solid rgba(255,255,255,0.3)', paddingTop: '32px' }}>
-                        <h3 style={{ fontSize: '24px', marginBottom: '24px', color: 'var(--accent-color)', textAlign: 'center' }}>PRESENTES EXCLUSIVOS (BÔNUS):</h3>
+                <div style={{
+                    display: 'grid',
+                    gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+                    gap: '40px',
+                    textAlign: 'left'
+                }}>
+                    <motion.div
+                        initial={{ opacity: 0, x: -30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6 }}
+                        style={{
+                            backgroundColor: 'rgba(255,255,255,0.1)',
+                            padding: '48px 32px',
+                            borderRadius: '24px',
+                            backdropFilter: 'blur(10px)',
+                            border: '1px solid rgba(255,255,255,0.2)',
+                            boxShadow: '0 20px 40px rgba(0,0,0,0.1)'
+                        }}
+                    >
+                        <h3 style={{ fontSize: '22px', marginBottom: '32px', borderBottom: '1px solid rgba(255,255,255,0.2)', pb: '16px', fontWeight: '800' }}>ITEM DO PACOTE</h3>
                         <ul style={{ listStyle: 'none' }}>
-                            {bonusItems.map((item, index) => (
-                                <motion.li
-                                    key={index}
-                                    initial={{ opacity: 0, x: 20 }}
-                                    whileInView={{ opacity: 1, x: 0 }}
-                                    viewport={{ once: true }}
-                                    transition={{ delay: 0.3 + (index * 0.1) }}
-                                    style={{ fontSize: '18px', marginBottom: '16px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}
-                                >
-                                    <div className="flex items-center">
-                                        <span className="text-2xl mr-2">🎁</span>
-                                        <span className="text-white">{item.text}</span>
-                                    </div>
-                                    <span className="text-[#FFD700] text-2xl font-extrabold line-through ml-3" style={{ fontFamily: "'Poppins', sans-serif" }}>
-                                        {item.value}
-                                    </span>
-                                </motion.li>
+                            {mainOfferItems.map((item, index) => (
+                                <li key={index} style={{ fontSize: '18px', marginBottom: '20px', display: 'flex', alignItems: 'flex-start' }}>
+                                    <span style={{
+                                        marginRight: '12px',
+                                        background: '#22C55E',
+                                        color: '#FFF',
+                                        width: '24px',
+                                        height: '24px',
+                                        borderRadius: '50%',
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        justifyContent: 'center',
+                                        fontSize: '12px',
+                                        marginTop: '2px',
+                                        flexShrink: 0
+                                    }}>✓</span>
+                                    <span>{item}</span>
+                                </li>
                             ))}
                         </ul>
-                    </div>
+                    </motion.div>
+
+                    <motion.div
+                        initial={{ opacity: 0, x: 30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6 }}
+                        style={{
+                            backgroundColor: 'rgba(255,255,255,0.15)',
+                            padding: '48px 32px',
+                            borderRadius: '24px',
+                            backdropFilter: 'blur(10px)',
+                            border: '1px solid rgba(255,255,255,0.3)',
+                            boxShadow: '0 20px 40px rgba(0,0,0,0.1)'
+                        }}
+                    >
+                        <h3 style={{ fontSize: '22px', marginBottom: '32px', borderBottom: '1px solid rgba(255,255,255,0.2)', pb: '16px', color: '#FFD700', fontWeight: '800' }}>BÔNUS EXCLUSIVOS</h3>
+                        <ul style={{ listStyle: 'none' }}>
+                            {bonusItems.map((item, index) => (
+                                <li key={index} style={{ fontSize: '16px', marginBottom: '20px', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+                                    <div style={{ display: 'flex', alignItems: 'flex-start' }}>
+                                        <span style={{ marginRight: '10px', fontSize: '18px' }}>🎁</span>
+                                        <span style={{ lineHeight: '1.4' }}>{item.text}</span>
+                                    </div>
+                                    <span style={{ color: '#FFD700', fontWeight: '800', textDecoration: 'line-through', fontSize: '14px', marginLeft: '12px', flexShrink: 0 }}>
+                                        {item.value}
+                                    </span>
+                                </li>
+                            ))}
+                        </ul>
+                    </motion.div>
                 </div>
 
                 <motion.div
                     initial={{ opacity: 0, scale: 0.9 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.5 }}
+                    transition={{ duration: 0.8, type: "spring" }}
                     style={{
-                        marginTop: '64px',
+                        marginTop: '60px',
                         backgroundColor: '#FFFFFF',
-                        color: 'var(--text-primary)',
-                        padding: '40px',
-                        borderRadius: '20px',
-                        boxShadow: '0 12px 40px rgba(0, 0, 0, 0.15)',
-                        maxWidth: '650px',
+                        color: '#1A1A1A',
+                        padding: '60px 40px',
+                        borderRadius: '32px',
+                        boxShadow: '0 40px 100px rgba(0, 0, 0, 0.4)',
+                        maxWidth: '600px',
                         marginLeft: 'auto',
                         marginRight: 'auto',
-                        position: 'relative'
+                        border: '8px solid rgba(255,255,255,0.2)'
                     }}
                 >
-                    <span style={{
+                    <div style={{
                         backgroundColor: '#FFD700',
-                        color: '#C71585',
-                        fontFamily: "'Poppins', sans-serif",
-                        fontSize: '16px',
-                        fontWeight: '700',
-                        padding: '6px 20px',
-                        borderRadius: '16px',
-                        marginBottom: '20px',
-                        display: 'inline-block'
+                        color: '#000000',
+                        fontSize: '14px',
+                        fontWeight: '900',
+                        padding: '8px 24px',
+                        borderRadius: '50px',
+                        display: 'inline-block',
+                        marginBottom: '32px',
+                        textTransform: 'uppercase',
+                        letterSpacing: '0.1em'
                     }}>
-                        🔥 OFERTA LIMITADA
-                    </span>
+                        Economia Real de R$ 1.372,30
+                    </div>
 
                     <p style={{
                         fontSize: '24px',
                         color: '#999999',
                         textDecoration: 'line-through',
-                        fontFamily: "'Poppins', sans-serif",
-                        fontWeight: '500',
-                        marginBottom: '12px'
+                        fontWeight: '600',
+                        marginBottom: '8px'
                     }}>
                         De R$ 1.402,00
                     </p>
 
-                    <div style={{ margin: '8px 0' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px' }}>
+                        <span style={{ fontSize: '24px', color: '#666', fontWeight: '600' }}>12x de</span>
                         <span style={{
-                            fontSize: '20px',
-                            color: '#666666',
-                            fontFamily: "'Open Sans', sans-serif",
-                            fontWeight: '400',
-                            marginRight: '8px'
-                        }}>
-                            12x de
-                        </span>
-                        <span style={{
-                            display: 'block',
-                            fontSize: 'clamp(40px, 5vw, 56px)',
+                            fontSize: 'clamp(56px, 10vw, 88px)',
                             color: '#FF1493',
-                            fontFamily: "'Poppins', sans-serif",
-                            fontWeight: '800',
-                            letterSpacing: '-0.01em',
-                            lineHeight: '1.2'
+                            fontWeight: '900',
+                            lineHeight: '1',
+                            letterSpacing: '-0.04em'
                         }}>
                             R$ 2,97
                         </span>
                     </div>
 
                     <p style={{
-                        color: '#999999',
-                        fontSize: '16px',
-                        margin: '16px 0',
-                        fontWeight: '400'
+                        color: '#666666',
+                        fontSize: '18px',
+                        margin: '24px 0',
+                        fontWeight: '500'
                     }}>
-                        ou
+                        ou apenas <span style={{ color: '#22C55E', fontWeight: '800', fontSize: '32px' }}>R$ 29,70</span> à vista
                     </p>
-
-                    <div style={{
-                        backgroundColor: '#F0FFF4',
-                        padding: '10px 20px',
-                        borderRadius: '10px',
-                        border: '2px solid #C3E6CB',
-                        display: 'inline-block'
-                    }}>
-                        <span style={{
-                            fontSize: '32px',
-                            color: '#28A745',
-                            fontFamily: "'Poppins', sans-serif",
-                            fontWeight: '700',
-                            marginRight: '8px'
-                        }}>
-                            R$ 29,70
-                        </span>
-                        <span style={{
-                            fontSize: '18px',
-                            color: '#666666',
-                            fontWeight: '400'
-                        }}>
-                            à vista
-                        </span>
-                    </div>
-
-                    <div style={{
-                        marginTop: '20px',
-                        backgroundColor: '#FFE4F0',
-                        color: '#C71585',
-                        fontFamily: "'Poppins', sans-serif",
-                        fontSize: '16px',
-                        fontWeight: '600',
-                        padding: '8px 24px',
-                        borderRadius: '10px',
-                        display: 'inline-block'
-                    }}>
-                        Economia de R$ 1.372,30
-                    </div>
 
                     <a
                         href="https://pay.kiwify.com.br/5epymGt"
                         target="_blank"
                         rel="noopener noreferrer"
                         onClick={() => window.fbq('track', 'InitiateCheckout')}
-                        className="w-full button p-4 rounded text-center text-white text-lg font-semibold cursor-pointer hover:opacity-75 transition duration-75"
+                        className="offer-cta-button"
                         style={{
-                            background: 'linear-gradient(to right, #FF1493, #C71585)',
-                            color: '#FFFFFF',
-                            border: 'none',
-                            padding: '18px 48px',
-                            fontSize: '20px',
-                            fontFamily: "'Poppins', sans-serif",
-                            fontWeight: '700',
-                            borderRadius: '12px',
-                            marginTop: '28px',
-                            boxShadow: '0 6px 24px rgba(255, 20, 147, 0.3)',
-                            textTransform: 'uppercase',
-                            letterSpacing: '0.03em',
-                            width: '100%',
                             display: 'block',
-                            textDecoration: 'none'
+                            background: 'linear-gradient(to right, #FF1493, #FF69B4)',
+                            color: '#FFFFFF',
+                            padding: '24px 40px',
+                            fontSize: '22px',
+                            fontWeight: '900',
+                            borderRadius: '100px',
+                            textDecoration: 'none',
+                            textTransform: 'uppercase',
+                            letterSpacing: '0.05em',
+                            marginTop: '40px',
+                            boxShadow: '0 15px 40px rgba(255, 20, 147, 0.4)',
+                            transition: 'all 0.3s ease'
                         }}
                     >
-                        QUERO COMEÇAR A VENDER AGORA!
+                        APROVEITAR ESTA OFERTA AGORA!
                     </a>
                 </motion.div>
             </div>

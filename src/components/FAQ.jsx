@@ -38,24 +38,41 @@ const FAQ = () => {
     };
 
     return (
-        <section style={{ padding: '100px 20px', backgroundColor: 'var(--white)' }}>
-            <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+        <section style={{ padding: '120px 20px', backgroundColor: '#FFFFFF' }}>
+            <div style={{ maxWidth: '850px', margin: '0 auto' }}>
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
-                    style={{ textAlign: 'center', marginBottom: '60px' }}
+                    style={{ textAlign: 'center', marginBottom: '80px' }}
                 >
-                    <h2 style={{ color: 'var(--secondary-color)', fontSize: '32px', marginBottom: '16px' }}>
+                    <span style={{
+                        color: '#FF1493',
+                        fontWeight: '800',
+                        fontSize: '14px',
+                        textTransform: 'uppercase',
+                        letterSpacing: '0.2em',
+                        display: 'block',
+                        marginBottom: '12px'
+                    }}>
+                        Central de suporte
+                    </span>
+                    <h2 style={{
+                        color: '#C71585',
+                        fontSize: 'clamp(32px, 5vw, 48px)',
+                        fontFamily: "'Playfair Display', serif",
+                        fontWeight: '800',
+                        marginBottom: '20px'
+                    }}>
                         Dúvidas Frequentes
                     </h2>
-                    <p style={{ fontSize: '20px', color: 'var(--text-secondary)' }}>
-                        Respostas para suas principais perguntas
+                    <p style={{ fontSize: '20px', color: '#666666', maxWidth: '600px', margin: '0 auto' }}>
+                        Tudo o que você precisa saber para começar sua jornada lucrativa hoje mesmo.
                     </p>
                 </motion.div>
 
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
                     {faqData.map((faq, index) => (
                         <motion.div
                             key={index}
@@ -64,18 +81,19 @@ const FAQ = () => {
                             viewport={{ once: true }}
                             transition={{ delay: faq.delay }}
                             style={{
-                                border: '2px solid var(--accent-color)',
-                                borderRadius: '8px',
-                                backgroundColor: 'var(--background-light)',
+                                border: '1px solid rgba(199, 21, 133, 0.1)',
+                                borderRadius: '20px',
+                                backgroundColor: openIndex === index ? '#FFF5F7' : '#FFFFFF',
                                 overflow: 'hidden',
-                                boxShadow: '0 2px 4px rgba(0,0,0,0.05)'
+                                boxShadow: openIndex === index ? '0 10px 30px rgba(199, 21, 133, 0.05)' : 'none',
+                                transition: 'all 0.3s ease'
                             }}
                         >
                             <button
                                 onClick={() => toggleFAQ(index)}
                                 style={{
                                     width: '100%',
-                                    padding: '20px',
+                                    padding: '24px 32px',
                                     display: 'flex',
                                     justifyContent: 'space-between',
                                     alignItems: 'center',
@@ -85,10 +103,26 @@ const FAQ = () => {
                                     cursor: 'pointer'
                                 }}
                             >
-                                <span style={{ fontSize: '18px', fontWeight: 'bold', color: 'var(--secondary-color)' }}>
+                                <span style={{
+                                    fontSize: '19px',
+                                    fontWeight: '700',
+                                    color: openIndex === index ? '#C71585' : '#333333',
+                                    fontFamily: "'Montserrat', sans-serif"
+                                }}>
                                     {faq.question}
                                 </span>
-                                {openIndex === index ? <Minus color="var(--secondary-color)" /> : <Plus color="var(--secondary-color)" />}
+                                <div style={{
+                                    width: '32px',
+                                    height: '32px',
+                                    borderRadius: '50%',
+                                    backgroundColor: openIndex === index ? '#FF1493' : 'rgba(199, 21, 133, 0.05)',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                    transition: 'all 0.3s ease'
+                                }}>
+                                    {openIndex === index ? <Minus size={18} color="#FFFFFF" /> : <Plus size={18} color="#C71585" />}
+                                </div>
                             </button>
                             <AnimatePresence>
                                 {openIndex === index && (
@@ -96,9 +130,14 @@ const FAQ = () => {
                                         initial={{ height: 0, opacity: 0 }}
                                         animate={{ height: 'auto', opacity: 1 }}
                                         exit={{ height: 0, opacity: 0 }}
-                                        transition={{ duration: 0.3 }}
+                                        transition={{ duration: 0.3, ease: "easeInOut" }}
                                     >
-                                        <div style={{ padding: '0 20px 20px 20px', color: 'var(--text-secondary)', lineHeight: '1.6' }}>
+                                        <div style={{
+                                            padding: '0 32px 32px 32px',
+                                            color: '#666666',
+                                            lineHeight: '1.8',
+                                            fontSize: '17px'
+                                        }}>
                                             {faq.answer}
                                         </div>
                                     </motion.div>

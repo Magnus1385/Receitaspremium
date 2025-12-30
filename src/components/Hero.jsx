@@ -62,10 +62,11 @@ const Hero = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.5 }}
+                    className="text-2xl font-black leading-tight"
                     style={{
                         fontFamily: "'Poppins', sans-serif",
                         fontWeight: '900',
-                        fontSize: 'clamp(20px, 4vw, 28px)',
+                        fontSize: 'clamp(24px, 5vw, 32px)',
                         color: '#C71585',
                         lineHeight: '1.2',
                         marginBottom: '32px',
@@ -74,7 +75,7 @@ const Hero = () => {
                         marginRight: 'auto'
                     }}
                 >
-                    SE VOCÊ NÃO VENDER COM NOSSO MÉTODO E RECEITAS EM 7 DIAS, DEVOLVEMOS SEU DINHEIRO
+                    <strong className="font-black">SE VOCÊ NÃO VENDER COM NOSSO MÉTODO E RECEITAS EM 7 DIAS, DEVOLVEMOS SEU DINHEIRO</strong>
                 </motion.p>
 
                 {/* Highlight Earnings Box */}

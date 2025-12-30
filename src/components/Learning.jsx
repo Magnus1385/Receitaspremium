@@ -34,13 +34,38 @@ const Learning = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
-                    style={{ textAlign: 'center', marginBottom: '60px' }}
+                    style={{ textAlign: 'center', marginBottom: '80px' }}
                 >
-                    <h2 style={{ color: 'var(--secondary-color)', fontSize: '32px', marginBottom: '16px' }}>
+                    <span style={{
+                        color: '#FF1493',
+                        fontWeight: '800',
+                        fontSize: '14px',
+                        textTransform: 'uppercase',
+                        letterSpacing: '0.2em',
+                        display: 'block',
+                        marginBottom: '12px'
+                    }}>
+                        Conhecimento que Transforma
+                    </span>
+                    <h2 style={{
+                        color: '#C71585',
+                        fontSize: 'clamp(32px, 5vw, 48px)',
+                        fontFamily: "'Playfair Display', serif",
+                        fontWeight: '800',
+                        marginBottom: '24px',
+                        lineHeight: '1.1'
+                    }}>
                         O que você vai aprender agora
                     </h2>
-                    <p style={{ fontSize: '20px', color: 'var(--text-secondary)' }}>
-                        Receitas validadas e testadas por centenas de alunas
+                    <div style={{
+                        width: '60px',
+                        height: '4px',
+                        background: '#FF1493',
+                        margin: '0 auto 24px',
+                        borderRadius: '2px'
+                    }} />
+                    <p style={{ fontSize: '20px', color: '#666666', maxWidth: '700px', margin: '0 auto' }}>
+                        Receitas validadas e testadas por centenas de alunas que já faturam alto.
                     </p>
                 </motion.div>
 
