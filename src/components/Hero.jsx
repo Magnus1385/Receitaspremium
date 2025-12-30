@@ -99,7 +99,7 @@ const Hero = () => {
                         color: '#FF1493',
                         display: 'block'
                     }}>
-                        Mais de R$ 8.500 por mês
+                        Renda Gourmet Lucrativa
                     </span>
                 </motion.div>
 
