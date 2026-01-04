@@ -79,17 +79,24 @@ const Hero = () => {
                 </motion.p>
 
                 {/* Highlight Earnings Box */}
-                <motion.div
+                <motion.a
+                    href="https://pay.kiwify.com.br/5epymGt"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
                     transition={{ duration: 0.6, delay: 0.6, type: "spring" }}
                     style={{
                         display: 'inline-block',
                         backgroundColor: '#FFFFFF',
                         padding: '16px 32px',
                         borderRadius: '12px',
-                        boxShadow: '0 8px 24px rgba(255, 20, 147, 0.2)',
-                        marginBottom: '48px'
+                        boxShadow: '0 8px 24px rgba(255, 20, 147, 0.3)',
+                        marginBottom: '48px',
+                        textDecoration: 'none',
+                        cursor: 'pointer'
                     }}
                 >
                     <span style={{
@@ -101,7 +108,7 @@ const Hero = () => {
                     }}>
                         Renda Gourmet Lucrativa
                     </span>
-                </motion.div>
+                </motion.a>
 
 
             </div>
