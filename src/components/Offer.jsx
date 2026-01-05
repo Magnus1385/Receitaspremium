@@ -210,7 +210,7 @@ const Offer = () => {
                     </p>
 
                     <a
-                        href="https://pay.kiwify.com.br/5epymGt"
+                        href="https://pay.hotmart.com/X103674013I?checkoutMode=10"
                         target="_blank"
                         rel="noopener noreferrer"
                         onClick={() => window.fbq('track', 'InitiateCheckout')}

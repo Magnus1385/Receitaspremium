@@ -80,7 +80,7 @@ const Hero = () => {
 
                 {/* Highlight Earnings Box */}
                 <motion.a
-                    href="https://pay.kiwify.com.br/5epymGt"
+                    href="https://pay.hotmart.com/X103674013I?checkoutMode=10"
                     target="_blank"
                     rel="noopener noreferrer"
                     initial={{ opacity: 0, scale: 0.8 }}
